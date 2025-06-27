@@ -21,8 +21,8 @@ body.modalopen {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  visibility: hidden; 
-  transition: opacity 0.6s ease, visibility 0.6s ease; 
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
   z-index: 1000;
 }
 
@@ -196,6 +196,25 @@ body {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
+}
+.error-text-container {
+  margin-top: 20px;
+}
+.error-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  visibility: hidden;
+  color: #ff001b;
+  margin-top: 5px;
+  transition: visibility 0.2s, opacity 0.2s;
+  opacity: 0;
+  justify-content: center;
+  display: flex;
+}
+.error-text.active {
+  visibility: visible;
+  opacity: 1;
 }
 .pages__link {
   position: relative;
