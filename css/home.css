@@ -1,0 +1,258 @@
+body.modalopen .modal {
+  transform: translate(-50%, -50%) scale(1);
+}
+body.modalopen {
+  overflow: hidden !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.fixed-overlay {
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden; 
+  transition: opacity 0.6s ease, visibility 0.6s ease; 
+  z-index: 1000;
+}
+
+.fixed-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 900px;
+  max-height: fit-content;
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+.modal__content {
+  background-color: #ffffff;
+  padding: 40px 12px;
+  color: #000000;
+  max-width: 900px;
+  display: flex;
+  gap: 16px;
+}
+.modal__poster {
+  flex-shrink: 0;
+  width: 375px;
+}
+
+.modal__poster-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.modal__content > button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+.ofwhat-list,
+.text-ofwhat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ofwhat-el {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #8c8c8c;
+}
+.text-ofwhat-el {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 14px;
+}
+.vote {
+  background: #ff6b01;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  padding: 1px 10px;
+}
+.votes {
+  background: #f7f7f7;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 1px 4px;
+}
+.info-film {
+  display: flex;
+  gap: 90px;
+  align-items: center;
+}
+.modal__about-title {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 16px;
+}
+.modal__about-text {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.modal__buttons {
+  display: flex;
+  gap: 15px;
+}
+.modal__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 14px 10px;
+  max-width: 160px;
+}
+.modal__btn--watched {
+  background-color: #ff6b01;
+  color: #ffffff;
+  border: 0;
+}
+.modal__btn--queue {
+  background-color: transparent;
+  color: #000000;
+}
+body {
+  margin: 0;
+  font-family: "Roboto";
+  color: #ffffff;
+}
+.container {
+  width: 1216px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin: 0 auto;
+}
+.header_container {
+  justify-content: space-between;
+  display: flex;
+  padding: 40px 32px;
+  align-items: center;
+}
+.header {
+  background-image: url(/Filmoteka/img/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 80px;
+}
+.header__logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.header__name {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+}
+.header__pages {
+  display: flex;
+  gap: 40px;
+}
+.header__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+.pages__link {
+  position: relative;
+}
+.pages__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff001b;
+  transition: width 0.3s ease;
+  width: 100%;
+}
+.header__search-box {
+  display: flex;
+  width: 394px;
+  justify-content: space-between;
+  height: 20px;
+  align-items: center;
+  justify-self: center;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 4px;
+}
+.header__input::placeholder {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.search-btn {
+  display: flex;
+  align-self: center;
+  width: auto;
+  padding-left: 12px;
+}
+.film-list {
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 32px;
+}
+.film-info {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.film-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.film-about {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ff6b08;
+}

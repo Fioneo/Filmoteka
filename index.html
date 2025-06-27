@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmoteka</title>
+    <link rel="stylesheet" href="css/main.css" />
+  <body>
+      <header class="header">
+        <div class="container header_container">
+        <div class="header__logo">
+          <img src="img/logo.svg" width="24" height="24" alt="logo" />
+          <h1 class="header__name"><a href="index.html">Filmoteka</a></h1>
+        </div>
+        <ul class="header__pages">
+            <li class="pages__el"><a href="#" class="pages__link pages__link--active">HOME</a></li>
+            <li class="pages__el"><a href="#" class="pages__link">MY LIBRARY</a></li>
+        </ul>
+        </div>
+        <div class="container">
+        <div class="header__search-box">
+            <input type="text" class="header__input" name="film" placeholder="Movie Search">
+            <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass" width="12px" height="12px"></i></button>
+        </div>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+            <ul class="film-list">
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/greyhound.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">GREYHOUND</span>
+                            <span class="film-about">Drama, Action | 2020</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/Rectangle 12.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">MONSTER HUNTER</span>
+                            <span class="film-about">Drama, Action | 2020</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/Rectangle 13.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">ONCE UPON A TIME... IN HOLLYWOOD</span>
+                            <span class="film-about">Drama, Comedy | 2019</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/Rectangle 14.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">LITTLE WOMEN</span>
+                            <span class="film-about">Drama | 2019</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/Rectangle 15.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">AQUARELA</span>
+                            <span class="film-about">Documentary, Drama, Other | 2019</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/Rectangle 16.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">DAVID CROSBY: REMEMBER MY NAME</span>
+                            <span class="film-about">Documentary, Drama, Other | 2019</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/Rectangle 17.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">MOON</span>
+                            <span class="film-about">Sci-Fi, Action, Thriller | 2010</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/Rectangle 18.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">A FISTFUL OF LEAD</span>
+                            <span class="film-about">Western | 2019</span>
+                        </div>
+                    </button>
+                </li>
+                <li class="film-element">
+                    <button class="film-watch">
+                        <div class="img-of-film">
+                            <img src="img/Rectangle 19.jpg" loading="lazy" width="395px" height="574px" alt="info of film">
+                        </div>
+                        <div class="film-info">
+                            <span class="film-name">BAD BOYS FOR LIFE</span>
+                            <span class="film-about">Action, Comedy | 2020</span>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+      </main>
+      <div class="fixed-overlay">
+        <div class="modal">
+        <div class="modal__content">
+          <button class="close-btn"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 8L22 22" stroke="black" stroke-width="2"/>
+            <path d="M8 22L22 8" stroke="black" stroke-width="2"/>
+            </svg>
+            </button>
+          
+          <div class="modal__poster">
+            <img src="img/Rectangle 12.jpg" alt="poster" class="modal__poster-img" width="375px" height="478px">
+          </div>
+          
+          <div class="modal__info">  
+            <div class="modal__stats">
+            <h2 class="modal__title">A FISTFUL OF LEAD</h2>
+            <div class="info-film">
+                <ul class="ofwhat-list">
+                    <li class="ofwhat-el">Vote / Votes</li>
+                    <li class="ofwhat-el">Popularity</li>
+                    <li class="ofwhat-el">Original Title</li>
+                    <li class="ofwhat-el">Genre</li>
+                </ul>
+                <ul class="text-ofwhat-list">
+                    <li class="text-ofwhat-el"><span class="vote">7.3</span> / <span class="votes">1260</span></li>
+                    <li class="text-ofwhat-el">100.2</li>
+                    <li class="text-ofwhat-el original-name">A FISTFUL OF LEAD</li>
+                    <li class="text-ofwhat-el">Western </li>
+                </ul>
+            </div>
+            </div>
+            
+            <div class="modal__about">
+              <h3 class="modal__about-title">ABOUT</h3>
+              <p class="modal__about-text">
+                Four of the West’s most infamous outlaws assemble to steal a huge stash of gold from the most corrupt settlement of the gold rush towns. But not all goes to plan one is killed and the other three escapes with bags of gold hide out in the abandoned gold mine where they happen across another gang of three – who themselves were planning to hit the very same bank! As tensions rise, things go from bad to worse as they realise the bags of gold are filled with lead... they’ve been double crossed – but by who and how?
+              </p>
+            </div>
+            
+            <div class="modal__buttons">
+              <button class="modal__btn modal__btn--watched">ADD TO WATCHED</button>
+              <button class="modal__btn modal__btn--queue">ADD TO QUEUE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <script src="https://kit.fontawesome.com/fe9686b2cf.js" crossorigin="anonymous"></script>
+      <script src="/Filmoteka/js/site.js" type="module"></script>
+      <script type="module" src="/Filmoteka/js/modal.js"></script>
+  </body>
+</html>
