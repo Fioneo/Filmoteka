@@ -168,14 +168,13 @@ body {
 .header_container {
   justify-content: space-between;
   display: flex;
-  padding: 40px 32px;
   align-items: center;
 }
 .header {
   background-image: url(/Filmoteka/img/header.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 80px;
+  padding: 40px 32px 80px 32px;
 }
 .header__logo {
   display: flex;
@@ -232,13 +231,12 @@ body {
 }
 .header__search-box {
   display: flex;
-  width: 394px;
+  max-width: 394px;
   justify-content: space-between;
-  height: 20px;
   align-items: center;
-  justify-self: center;
   border-bottom: 1px solid #ffffff;
   padding-bottom: 4px;
+  margin: 0 auto;
 }
 .header__input::placeholder {
   color: #ffffff;
@@ -274,4 +272,46 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #ff6b08;
+}
+@media screen and (max-width: 1440px) {
+  .header {
+    background-image: url(/Filmoteka/img/header1440.png);
+  }
+  .container {
+    max-width: 764px;
+    width: auto;
+  }
+  .header__search-box {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 929px) {
+  .header {
+    background-image: url(/Filmoteka/img/header320.png);
+  }
+  .header__name {
+    font-size: 30px;
+  }
+  .film-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 526px) {
+  .header__name {
+    display: none;
+  }
+  .container {
+    max-width: 280px;
+    padding: 0 20px;
+  }
+  .header__search-box {
+    margin-top: 54px;
+    justify-self: auto;
+    max-width: none;
+  }
+  .film-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
